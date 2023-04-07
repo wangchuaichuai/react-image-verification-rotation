@@ -1,0 +1,43 @@
+{
+  "name": "image-verification-rotation",
+  "version": "1.4.2",
+  "description": "This is a react component that implements the function of rotating images for verification and used typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "captcha",
+    "image-captcha",
+    "react",
+    "typescript",
+    "image-rotation-verification",
+    "verification-code",
+    "verification",
+    "rotating",
+    "react-component",
+    "react-image-captcha",
+    "react-image-verification-code",
+    "验证码",
+    "图形验证码",
+    "旋转图片",
+    "旋转"
+  ],
+  "author": "wangxin",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.32",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "4.2.4"
+  }
+}

@@ -1,0 +1,133 @@
+.image-verification {
+    position: relative;
+    box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.2);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .image {
+    display: block;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  /* 滑块移动位置变色 */
+  .slider-track::before {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #65cca9;
+  }
+  
+  .slider-track {
+    height: 40px;
+    z-index: 6;
+    background-color: #ddd;
+    position: relative;
+    border-radius: 5px;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .verification-status {
+    color: #888;
+    position: absolute;
+    font-size: 14px;
+    z-index: 3;
+    transition: color 0.2s ease-out;
+    text-context: center;
+    width: 60%;
+    margin: 0 20%;
+    text-align: center;
+    line-height: 40px;
+    /* 背景颜色线性渐变 */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, #4d4d4d),
+      color-stop(0.4, #4d4d4d),
+      color-stop(0.5, white),
+      color-stop(0.6, #4d4d4d),
+      color-stop(1, #4d4d4d)
+    );
+    /* 新式写法 */
+    /* background: -webkit-linear-gradient(left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d)); */
+  
+    /* 设置为text，意思是把文本内容之外的背景给裁剪掉 */
+    -webkit-background-clip: text;
+    /* 设置对象中的文字填充颜色 这里设置为透明 */
+    -webkit-text-fill-color: transparent;
+    /* 每隔2秒调用下面的CSS3动画 infinite属性为循环执行animate */
+    -webkit-animation: animate 1.3s infinite;
+  }
+  .verification-status.verified {
+    color: #65cca9;
+  }
+  
+  .slider {
+    width: 46px;
+    height: 36px;
+    background-color: #eee;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    cursor: move;
+    z-index: 4;
+  }
+  
+  .reset-button {
+    border: none;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    margin: 5px auto;
+    color: #505050;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* 兼容写法，要放在@keyframes前面 */
+  @-webkit-keyframes animate {
+    /* 背景从-100px的水平位置，移动到+100px的水平位置。如果要移动Y轴的，设置第二个数值 */
+    from {
+      background-position: -100px;
+    }
+    to {
+      background-position: 100px;
+    }
+  }
+  @keyframes animate {
+    from {
+      background-position: -100px;
+    }
+    to {
+      background-position: 100px;
+    }
+  }
+  /* 浮层 */
+  .captcha_message[data-v-273e6401] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    background-color: rgba(34, 34, 34, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+  }
+  
